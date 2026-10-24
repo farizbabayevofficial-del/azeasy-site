@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://farizbabayevofficial-del.github.io/azeasy-site/sitemap.xml
+Sitemap: https://azeasier.finalingua.com/sitemap.xml
