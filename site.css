@@ -43,11 +43,14 @@ mark { background:var(--mark); color:var(--on-mark); padding:2px 6px; border-rad
 .benefits p { color:var(--muted); max-width:30ch; }
 .know, .card, details { background:var(--card); border-radius:14px; padding:20px 22px; box-shadow:var(--shadow); }
 .benefits p { margin:0; }
-.human { display:flex; align-items:flex-start; gap:20px; max-width:760px; margin:64px auto; padding:28px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-.human-mark { flex:none; width:48px; height:48px; display:grid; place-items:center; border-radius:50%; background:var(--soft); color:var(--primary-text); font:700 22px Georgia, serif; }
-.human h2 { color:var(--ink); margin:0 0 8px; }
-.human p { margin:0; }
-.human .human-signature { margin-top:14px; color:var(--muted); font-size:14px; }
+.first-step { display:grid; grid-template-columns:1fr minmax(160px, 34%); align-items:center; gap:20px; overflow:hidden; padding:clamp(24px, 5vw, 44px); border-radius:24px; background:var(--soft); }
+.first-step h2 { color:var(--ink); font-size:clamp(24px, 3vw, 34px); line-height:1.2; margin:0 0 22px; }
+.first-step p { margin:0; }
+.first-step .first-step-word { color:var(--primary-text); font-size:clamp(34px, 5vw, 52px); font-weight:700; line-height:1.1; }
+.first-step-translation { color:var(--muted); margin:4px 0 16px !important; }
+.first-step-link { display:inline-block; margin-top:18px; font-weight:700; text-underline-offset:4px; }
+.first-step img { display:block; width:100%; height:auto; max-width:300px; justify-self:center; }
+@media (max-width:480px) { .first-step { grid-template-columns:1fr 120px; gap:4px; padding:24px 18px; } .first-step img { align-self:end; } }
 .know ul { margin:0; padding-left:20px; }
 .know li { margin:12px 0; }
 .card { margin:0 0 10px; }
