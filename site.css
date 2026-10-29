@@ -16,14 +16,14 @@ a:focus-visible, summary:focus-visible { outline:3px solid var(--primary-text); 
 .langs a { padding:10px 12px; min-height:44px; border-radius:12px; text-decoration:none; font-weight:600; background:var(--fill); }
 .langs a[aria-current] { background:var(--primary); color:var(--on-primary); }
 main { max-width:960px; margin:0 auto; padding:8px 16px 32px; }
-section { margin:32px 0; }
+section { margin:48px 0; }
 h1 { font-size:clamp(30px, 6vw, 44px); line-height:1.15; margin:0 0 12px; }
 h2 { font-size:22px; color:var(--primary-text); margin:0 0 12px; }
 h3 { font-size:18px; margin:0 0 6px; }
 .lead { font-size:19px; margin:0 0 20px; }
 .get { margin:0 0 8px; font-weight:600; }
 .muted { color:var(--muted); font-size:15px; }
-.hero { display:grid; gap:24px; align-items:center; }
+.hero { display:grid; gap:36px; align-items:center; }
 .stores { display:flex; flex-wrap:wrap; gap:12px; margin:0 0 12px; }
 .button { display:inline-block; background:var(--primary); color:var(--on-primary); text-decoration:none; font-weight:700; padding:12px 22px; border-radius:12px; min-height:44px; }
 .button:hover { filter:brightness(1.12); }
@@ -32,14 +32,16 @@ mark { background:var(--mark); color:var(--on-mark); padding:2px 6px; border-rad
 .shots figure { margin:0; }
 .shots figure:nth-child(3) { display:none; }
 .shots img { width:100%; height:auto; border-radius:18px; box-shadow:var(--shadow); background:var(--card); }
-.benefits { list-style:none; margin:0; padding:0; display:grid; gap:12px; }
-.benefits li, .know, .card, details { background:var(--card); border-radius:14px; padding:14px 18px; box-shadow:var(--shadow); }
+.benefits { list-style:none; margin:0; padding:0; display:grid; gap:16px; }
+.benefits li, .know, .card, details { background:var(--card); border-radius:14px; padding:20px 22px; box-shadow:var(--shadow); }
 .benefits p { margin:0; }
 .know ul { margin:0; padding-left:20px; }
-.know li { margin:6px 0; }
+.know li { margin:12px 0; }
 .card { margin:0 0 10px; }
-details { margin:10px 0; }
-summary { cursor:pointer; font-weight:600; min-height:44px; display:flex; align-items:center; }
+details { margin:12px 0; }
+summary { cursor:pointer; font-weight:600; min-height:44px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+summary::after { content:"+"; font-size:22px; color:var(--primary-text); flex:none; }
+details[open] > summary::after { content:"−"; }
 details p { margin:8px 0 0; }
 footer { max-width:960px; margin:0 auto; padding:8px 16px 48px; }
 footer p { margin:6px 0; }
@@ -49,6 +51,6 @@ footer p { margin:6px 0; }
   .shots figure:nth-child(3) { display:block; }
 }
 @media (min-width:820px) {
-  .hero { grid-template-columns:1.1fr 1fr; }
+  .hero { grid-template-columns:1.1fr 1fr; gap:56px; }
   .benefits { grid-template-columns:repeat(3, 1fr); }
 }
