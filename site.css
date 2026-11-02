@@ -279,3 +279,4 @@ h1, h2, .intro-copy, .benefits h2, #support summary, .first-step blockquote, .pr
 .story-signature { margin-top:42px; font-family:Georgia,serif; font-style:italic; }
 .story-store { margin-top:16px; }
 .phone-display { left:54.4%; top:67.4%; width:4.7%; height:20%; transform:translate(-50%,-50%) rotate(12deg); }
+.phone-display { left:54.3%; top:67.5%; width:4.85%; height:20.2%; transform:translate(-50%,-50%) rotate(12deg) skewX(-1deg); filter:brightness(.91) contrast(.96) saturate(.88); opacity:.94; border-radius:9%; }
