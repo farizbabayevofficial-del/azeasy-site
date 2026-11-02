@@ -144,3 +144,69 @@ section { margin:clamp(64px, 8vw, 104px) 0; }
 @media (min-width:820px) { .hero { grid-template-columns:.92fr 1.08fr; } .benefits li + li { border-left:1px solid var(--line); padding-left:28px; } }
 @media (max-width:600px) { .bar { padding:16px; } main { padding:0 16px 32px; } .hero { margin-top:8px; padding:28px 22px 24px; border-radius:24px; } .hero h1 { font-size:clamp(38px, 11vw, 52px); } .shots { padding:24px 15px 18px; gap:7px; } .shots img { border-width:2px; border-radius:12px; } .benefits li + li { border-top:1px solid var(--line); } }
 @media (max-width:380px) { .bar { gap:4px; } .brand { gap:6px; } .brand img:first-child { width:34px; height:34px; } .brand .wordmark { font-size:20px; } .langs { gap:3px; } .langs a { padding:10px 8px; } }
+
+/* A first conversation: open typography and real product, in AzEasier's palette. */
+html, body { overflow-x:clip; }
+.bar { padding-top:22px; padding-bottom:22px; }
+.brand .wordmark { font-size:22px; }
+.language-menu { position:relative; z-index:5; margin:0; padding:0; background:transparent; box-shadow:none; border:0; }
+.language-menu summary { min-height:44px; gap:8px; padding:0 10px; font-size:14px; }
+.language-menu summary::after { display:none; }
+.language-menu nav { position:absolute; right:0; top:100%; display:flex; padding:6px; background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); }
+.langs a { min-height:42px; padding:9px; }
+.hero { overflow:visible; border:0; border-radius:0; background:none; padding:clamp(30px, 6vw, 86px) 0; gap:clamp(32px, 5vw, 72px); }
+.hero h1 { max-width:10ch; font-weight:700; font-size:clamp(48px, 6.5vw, 90px); line-height:.99; letter-spacing:-.055em; overflow-wrap:break-word; min-width:0; }
+.hero .lead { max-width:36ch; }
+.shots { padding:20px 8px; background:none; border:0; overflow:visible; gap:clamp(8px, 1.5vw, 20px); }
+.shots::before, .phrasebook::after { display:none; }
+.shots img { border:0; box-shadow:0 18px 45px rgba(11,47,51,.2); }
+.shots figure:first-child { transform:rotate(-4deg) translateY(15px); }
+.shots figure:nth-child(2) { transform:translateY(-18px); }
+.shots figure:last-child { transform:rotate(4deg) translateY(15px); }
+.intro-copy { border:0; padding:0; font-size:clamp(20px,2.5vw,30px); line-height:1.4; color:var(--ink); letter-spacing:-.025em; }
+.benefits { border:0; gap:28px; }
+.benefits li, .benefits li + li { border:0; padding:0; }
+.benefits h2 { font-size:clamp(21px,2vw,27px); letter-spacing:-.03em; }
+.learning { gap:clamp(50px,8vw,110px); }
+.learning h2, .learning-faq h2 { font-size:clamp(34px,4vw,54px); letter-spacing:-.045em; }
+.learning-steps li::before { background:none; font-size:14px; }
+.phrasebook { background:none; border:0; border-radius:0; padding:12px 0; }
+.phrasebook dl div { padding:19px 0; }
+.phrasebook dt { font-size:clamp(24px,3vw,38px); letter-spacing:-.04em; }
+.learning-faq details, #support details, .know, .card { border:0; border-radius:0; background:none; box-shadow:none; border-bottom:1px solid var(--line); padding:15px 0; }
+.first-step { background:none; border:0; border-radius:0; padding:clamp(20px,4vw,50px) 0; }
+.first-step blockquote { font-size:clamp(30px,4vw,52px); line-height:1.2; font-weight:400; }
+.final-cta { border:0; border-radius:0; background:none; padding:clamp(30px,5vw,60px) 0; }
+.final-cta h2 { font-size:clamp(42px,6vw,78px); line-height:1.04; }
+.store-link { overflow:hidden; }
+.store-link::after { content:""; position:absolute; inset:-50% auto -50% -80%; width:45%; background:linear-gradient(110deg, transparent, rgba(255,255,255,.35), transparent); transform:skewX(-20deg); pointer-events:none; }
+@media (prefers-reduced-motion:no-preference) { .store-link::after { animation:cta-glimmer 5s ease-in-out infinite; } @keyframes cta-glimmer { 0%,65% { left:-80%; } 85%,100% { left:140%; } } .shots figure { animation:none!important; } .store-link { transition:transform .25s ease; } .store-link:hover { transform:translateY(-3px) scale(1.025); } }
+@media (prefers-reduced-motion:reduce) { *, *::before, *::after { animation-duration:.001ms!important; animation-iteration-count:1!important; transition-duration:.001ms!important; } }
+@media (min-width:820px) { .hero { grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); } }
+@media (max-width:600px) { .hero { padding:35px 0 10px; } .hero h1 { font-size:clamp(48px,12vw,68px); } .shots { margin:12px 0; padding:12px; } .benefits { gap:30px; } .benefits li + li { border:0; } .first-step { grid-template-columns:1fr 100px; } }
+
+/* A brighter, quieter brand palette shared by every language. */
+:root { color-scheme:light; --bg:#f6f9f6; --card:#ffffff; --fill:#e7efec; --ink:#0b2f33; --muted:#4a6468; --line:#d3e1dd; --line-strong:#6f8b87; --primary:#0b6b63; --primary-text:#0b6b63; --on-primary:#fff; --soft:#e1f0ec; --accent:#0b6b63; --shadow:0 10px 30px rgba(11,47,51,.09); }
+body { background:var(--bg); }
+h1, .intro-copy, .first-step blockquote, .final-cta h2 { font-family:Georgia, 'Times New Roman', serif; font-weight:400; letter-spacing:-.045em; text-wrap:balance; }
+.hero h1 { max-width:11ch; font-weight:400; font-size:clamp(56px,6.5vw,92px); line-height:1.02; }
+.hero .lead { max-width:30ch; font-size:clamp(18px,1.6vw,21px); }
+.hero { align-items:center; }
+.intro-section { max-width:860px; margin:clamp(90px,12vw,170px) auto; text-align:center; }
+.intro-copy { max-width:none; font-size:clamp(28px,4vw,49px); line-height:1.2; }
+.benefits { margin:0; }
+.benefits h2, .learning h2, .learning-faq h2 { letter-spacing:-.035em; }
+.learning { margin-top:clamp(100px,13vw,170px); }
+.support-fold { margin:0; }
+.support-fold > summary { font-size:20px; }
+.first-step { gap:clamp(20px,6vw,80px); }
+.stores { align-items:center; }
+.store-link:focus-visible, .language-menu summary:focus-visible { outline:3px solid var(--primary); outline-offset:4px; }
+@media (prefers-reduced-motion:no-preference) { .shots figure { animation:gentle-arrive .8s ease-out both!important; } .shots figure:nth-child(2) { animation-delay:.12s!important; } .shots figure:nth-child(3) { animation-delay:.24s!important; } @keyframes gentle-arrive { from { opacity:0; translate:0 20px; } to { opacity:1; translate:0 0; } } }
+@media (max-width:600px) { .hero h1 { font-size:clamp(52px,13vw,72px); } .intro-section { text-align:left; } .intro-copy { font-size:30px; } }
+.connection-image { margin:0 auto clamp(90px,12vw,160px); overflow:hidden; border-radius:2px; }
+.connection-image img { display:block; width:100%; height:clamp(280px,52vw,650px); object-fit:cover; }
+@media (prefers-reduced-motion:no-preference) { .connection-image img { transition:transform .8s ease; } .connection-image:hover img { transform:scale(1.025); } }
+.brand .wordmark { color:var(--primary); text-shadow:none; }
+.learning-steps { list-style:none; }
+.learning-steps li::marker { content:""; }
