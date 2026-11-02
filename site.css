@@ -103,3 +103,44 @@ footer p { margin:6px 0; }
 .final-cta > img { width:clamp(100px, 20vw, 200px); height:auto; }
 @media (min-width:820px) { .learning { grid-template-columns:1fr 1fr; gap:70px; } }
 @media (max-width:480px) { .final-cta { align-items:flex-end; } .final-cta > img { width:90px; } }
+
+/* Brand-led editorial treatment, using AzEasier's official palette and lattice. */
+.bar { max-width:1200px; padding:22px 24px; }
+main { max-width:1200px; padding:0 24px 48px; }
+footer { max-width:1200px; padding:24px 24px 56px; border-top:1px solid var(--line); }
+section { margin:clamp(64px, 8vw, 104px) 0; }
+.hero { position:relative; overflow:hidden; gap:40px; margin:18px 0 42px; padding:clamp(28px, 5vw, 62px); border:1px solid var(--line); border-radius:32px; background:var(--card); }
+.hero-text { position:relative; z-index:1; }
+.eyebrow { margin:0 0 22px; color:var(--primary-text); font-size:12px; font-weight:700; letter-spacing:.12em; }
+.hero h1 { max-width:12ch; font-size:clamp(40px, 5vw, 67px); line-height:1.04; letter-spacing:-.045em; }
+.hero .lead { max-width:43ch; margin:24px 0; color:var(--muted); font-size:clamp(17px, 1.6vw, 20px); }
+.hero .muted { margin-bottom:0; }
+.shots { position:relative; gap:12px; padding:38px 24px 26px; background:var(--soft); border:1px solid var(--line); border-radius:26px; }
+.shots::before { content:""; position:absolute; inset:0; border-radius:inherit; background:url('img/pattern-lattice-light.svg') center/300px; opacity:.3; pointer-events:none; }
+.shots figure { position:relative; }
+.shots figure:nth-child(2) { transform:translateY(-14px); }
+.shots img { border:3px solid var(--card); border-radius:20px; box-shadow:0 16px 32px rgba(11,47,51,.15); }
+.intro-section { margin:38px 0 48px; }
+.intro-copy { max-width:80ch; padding-left:20px; border-left:3px solid var(--accent); }
+.benefits { gap:0; border-block:1px solid var(--line); }
+.benefits li { border:0; padding:26px 20px 26px 0; }
+.benefits h2 { font-size:18px; }
+.learning { align-items:stretch; gap:clamp(28px, 6vw, 80px); }
+.learning > div:first-child { padding:12px 0; }
+.learning-steps li { padding-bottom:30px; }
+.learning-steps li::before { background:var(--soft); border-radius:50%; width:35px; height:35px; display:grid; place-items:center; font-size:12px; }
+.phrasebook { position:relative; overflow:hidden; border:1px solid var(--line); background:var(--card); }
+.phrasebook::after { content:""; display:block; position:absolute; right:-40px; top:-60px; width:170px; height:170px; background:url('img/pattern-lattice-light.svg') center/170px; opacity:.3; pointer-events:none; }
+.phrasebook h2, .phrasebook p, .phrasebook dl { position:relative; z-index:1; }
+.phrasebook dl div { border-color:var(--line); }
+.phrasebook dt { color:var(--primary-text); }
+.first-step { padding:clamp(30px, 6vw, 68px); border:1px solid var(--line); }
+.first-step blockquote { max-width:24ch; }
+.learning-faq { max-width:none; }
+.learning-faq details, #support details, .know, .card { border:1px solid var(--line); box-shadow:none; }
+.final-cta { border:1px solid var(--line); padding:clamp(32px, 6vw, 68px); }
+.final-cta h2 { max-width:18ch; font-size:clamp(30px, 4vw, 48px); letter-spacing:-.03em; }
+@media (prefers-color-scheme:dark) { .shots::before, .phrasebook::after { background-image:url('img/pattern-lattice-dark.svg'); opacity:.45; } }
+@media (min-width:820px) { .hero { grid-template-columns:.92fr 1.08fr; } .benefits li + li { border-left:1px solid var(--line); padding-left:28px; } }
+@media (max-width:600px) { .bar { padding:16px; } main { padding:0 16px 32px; } .hero { margin-top:8px; padding:28px 22px 24px; border-radius:24px; } .hero h1 { font-size:clamp(38px, 11vw, 52px); } .shots { padding:24px 15px 18px; gap:7px; } .shots img { border-width:2px; border-radius:12px; } .benefits li + li { border-top:1px solid var(--line); } }
+@media (max-width:380px) { .bar { gap:4px; } .brand { gap:6px; } .brand img:first-child { width:34px; height:34px; } .brand .wordmark { font-size:20px; } .langs { gap:3px; } .langs a { padding:10px 8px; } }
