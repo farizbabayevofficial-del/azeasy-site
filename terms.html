@@ -12,14 +12,23 @@
   p, li { color:var(--ink); } .muted { color:var(--muted); font-size:14px; }
   a { color:var(--primary); } hr { border:0; border-top:1px solid var(--line); margin:40px 0; }
   h1, h2, h3 { font-family:Georgia, serif; font-weight:400; letter-spacing:-.02em; }
+  .legal-top { max-width:760px; margin:auto; padding:20px 20px 0; display:flex; align-items:center; justify-content:space-between; }
+  .legal-home { text-decoration:none; font-weight:600; }
+  .legal-language { position:relative; }
+  .legal-language summary { cursor:pointer; list-style:none; padding:8px; color:var(--ink); }
+  .legal-language summary::-webkit-details-marker { display:none; }
+  .legal-language nav { position:absolute; right:0; z-index:2; display:flex; flex-direction:column; min-width:52px; background:white; box-shadow:0 5px 18px #0b2f3320; }
+  .legal-language nav a { padding:8px 12px; text-decoration:none; color:var(--ink); }
+  .legal-language nav a:hover { background:#e7efec; }
 </style>
 </head>
 <body>
+<header class="legal-top"><a class="legal-home" href="./">AzEasier</a><details class="legal-language"><summary aria-label="Language / Язык / Langue"><span id="current-language">RU</span> ⌄</summary><nav aria-label="Language / Язык / Langue"><a href="#ru" lang="ru">RU</a><a href="#en" lang="en">EN</a><a href="#fr" lang="fr">FR</a></nav></details></header>
 <main>
 
 <p class="muted"><a href="#en">English version below ↓</a> · <a href="#fr">Version française ci-dessous ↓</a> · <a href="index.html">Поддержка / Support / Assistance</a> · <a href="privacy.html">Политика конфиденциальности / Privacy Policy / Politique de confidentialité</a></p>
 
-<h1>Условия продажи и использования AzEasier</h1>
+<h1 id="ru">Условия продажи и использования AzEasier</h1>
 <p class="muted">Действуют с 26.10.2026.</p>
 <p>Эти условия регулируют доступ к сервису и продажу подписки через магазин приложений.</p>
 
@@ -197,5 +206,6 @@
 </div>
 
 </main>
+<script>function updateLanguage(){const lang=location.hash.slice(1);document.getElementById('current-language').textContent=['en','fr'].includes(lang)?lang.toUpperCase():'RU';document.querySelector('.legal-language').open=false;}window.addEventListener('hashchange',updateLanguage);updateLanguage();</script>
 </body>
 </html>
