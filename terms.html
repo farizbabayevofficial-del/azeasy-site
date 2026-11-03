@@ -12,6 +12,8 @@
   p, li { color:var(--ink); } .muted { color:var(--muted); font-size:14px; }
   a { color:var(--primary); } hr { border:0; border-top:1px solid var(--line); margin:40px 0; }
   h1, h2, h3 { font-family:Georgia, serif; font-weight:400; letter-spacing:-.02em; }
+  footer { max-width:760px; margin:0 auto; padding:24px 20px 48px; border-top:1px solid var(--line); }
+  footer p { margin:6px 0; }
   .legal-top { max-width:760px; margin:auto; padding:20px 20px 0; display:flex; align-items:center; justify-content:space-between; }
   .legal-home { text-decoration:none; font-weight:600; }
   .legal-language { position:relative; }
@@ -25,8 +27,6 @@
 <body>
 <header class="legal-top"><a class="legal-home" href="./">AzEasier</a><details class="legal-language"><summary aria-label="Language / Язык / Langue"><span id="current-language">RU</span> ⌄</summary><nav aria-label="Language / Язык / Langue"><a href="#ru" lang="ru">RU</a><a href="#en" lang="en">EN</a><a href="#fr" lang="fr">FR</a></nav></details></header>
 <main>
-
-<p class="muted"><a href="#en">English version below ↓</a> · <a href="#fr">Version française ci-dessous ↓</a> · <a href="index.html">Поддержка / Support / Assistance</a> · <a href="privacy.html">Политика конфиденциальности / Privacy Policy / Politique de confidentialité</a></p>
 
 <h1 id="ru">Условия продажи и использования AzEasier</h1>
 <p class="muted">Действуют с 26.10.2026.</p>
@@ -206,6 +206,7 @@
 </div>
 
 </main>
-<script>function updateLanguage(){const lang=location.hash.slice(1);document.getElementById('current-language').textContent=['en','fr'].includes(lang)?lang.toUpperCase():'RU';document.querySelector('.legal-language').open=false;}window.addEventListener('hashchange',updateLanguage);updateLanguage();</script>
+<footer><p id="legal-links"><a href="/privacy.html">Политика конфиденциальности</a> · <a href="/terms.html#ru">Условия использования</a> · <a href="/data-deletion.html#ru">Удаление аккаунта и данных</a></p><p class="muted">© 2026 Finalingua</p></footer>
+<script>const footers={"ru": "<a href=\"/privacy.html\">Политика конфиденциальности</a> · <a href=\"/terms.html#ru\">Условия использования</a> · <a href=\"/data-deletion.html#ru\">Удаление аккаунта и данных</a>", "en": "<a href=\"/en/privacy.html\">Privacy Policy</a> · <a href=\"/terms.html#en\">Terms of Use</a> · <a href=\"/data-deletion.html#en\">Account and data deletion</a>", "fr": "<a href=\"/fr/privacy.html\">Politique de confidentialité</a> · <a href=\"/terms.html#fr\">Conditions d’utilisation</a> · <a href=\"/data-deletion.html#fr\">Suppression du compte et des données</a>"};function updateLanguage(){const lang=location.hash.slice(1);document.getElementById('current-language').textContent=['en','fr'].includes(lang)?lang.toUpperCase():'RU';document.getElementById('legal-links').innerHTML=footers[lang]||footers.ru;document.querySelector('.legal-language').open=false;}window.addEventListener('hashchange',updateLanguage);updateLanguage();</script>
 </body>
 </html>
