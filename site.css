@@ -283,10 +283,10 @@ h1, h2, .intro-copy, .benefits h2, #support summary, .first-step blockquote, .pr
 .brand .wordmark { font-family:"Avenir Next",sans-serif; font-size:16px; font-weight:600; letter-spacing:normal; color:#007a6b; text-shadow:none; }
 
 /* Compact contact details keep support easy to find in every language. */
-footer:has(.footer-contact) { display:grid; grid-template-columns:minmax(0, 1fr) auto; align-items:end; gap:clamp(24px, 7vw, 100px); }
+footer.with-contact { display:grid; grid-template-columns:minmax(0, 1fr) auto; align-items:end; gap:clamp(24px, 7vw, 100px); }
 .footer-legal { min-width:0; font-size:.79rem; }
 .footer-legal .muted { font-size:.75rem; }
 .footer-legal p:last-child { font-size:.7rem; }
 .footer-contact { text-align:right; font-size:.85rem; }
-.footer-contact h2 { margin:0 0 4px; font-size:1rem; }
-@media (max-width:650px) { footer:has(.footer-contact) { grid-template-columns:1fr; gap:18px; } .footer-contact { text-align:left; } }
+.footer-contact h2 { margin:0 0 4px; font-size:1rem; color:#52686b; }
+@media (max-width:650px) { footer.with-contact { grid-template-columns:1fr; gap:18px; } .footer-contact { text-align:right; } }
