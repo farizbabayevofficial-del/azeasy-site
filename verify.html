@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow"><meta name="referrer" content="no-referrer">
+  <title>AzEasier · Verify a course record</title>
+  <style>
+    :root { color-scheme:light; font-family:'Avenir Next',system-ui,sans-serif; color:#123b3a; background:#f3f8f5; }
+    body { margin:0; } main { max-width:640px; margin:8vh auto; padding:0 24px; }
+    .brand { color:#12675e; font-weight:700; font-size:24px; text-decoration:none; }
+    .panel { background:white; border:1px solid #d9e4df; border-radius:24px; margin-top:32px; padding:clamp(24px,6vw,48px); box-shadow:0 14px 45px #113b3820; }
+    h1 { font:normal clamp(32px,7vw,48px) Georgia,serif; margin:0 0 16px; } p { line-height:1.55; color:#526d68; }
+    label { display:block; font-weight:600; margin:30px 0 10px; } input { box-sizing:border-box; width:100%; padding:14px; border:1px solid #a3bcb4; border-radius:12px; font:inherit; }
+    button { margin-top:14px; padding:14px 24px; color:white; background:#00665b; border:0; border-radius:12px; font:inherit; font-weight:600; cursor:pointer; }
+    #result { margin-top:28px; border-top:1px solid #e1ebe6; padding-top:20px; } #result:empty { display:none; }
+    #status { font-weight:700; color:#075e51; } #name { font:normal 30px Georgia,serif; margin:18px 0; } #detail { color:#526d68; } #note { font-size:14px; }
+  </style>
+</head>
+<body><main><a class="brand" href="/">AzEasier</a><section class="panel"><h1 id="title"></h1><p id="intro"></p>
+  <form id="form"><label id="label" for="code"></label><input id="code" name="id" autocomplete="off" spellcheck="false" required><button id="submit" type="submit"></button></form>
+  <section id="result" aria-live="polite"><div id="status"></div><div id="name"></div><div id="detail"></div><p id="note"></p></section>
+</section></main>
+<!-- Deployment supplies only the public URL and publishable key, never a service-role key. -->
+<script src="./verify-config.js"></script>
+<script type="module">
+  import {translations, verify} from './verify.js';
+  const requested=new URLSearchParams(location.search).get('lang');
+  const lang=translations[requested] ? requested : (translations[navigator.language.slice(0,2)] ? navigator.language.slice(0,2) : 'en');
+  const t=translations[lang], el=id=>document.getElementById(id); document.documentElement.lang=lang;
+  ['title','intro','label'].forEach(key=>el(key).textContent=t[key]); el('submit').textContent=t.action;
+  const code=el('code'); code.value=new URLSearchParams(location.search).get('id') || '';
+  async function show() {
+    el('status').textContent='…'; el('name').textContent=''; el('detail').textContent=''; el('note').textContent='';
+    const answer=await verify(code.value.trim(),window.AZEASIER_VERIFY_CONFIG);
+    el('status').textContent=t[answer.status];
+    if (answer.status==='valid') {
+      const c=answer.record; el('name').textContent=c.holder_name;
+      el('detail').textContent=`${t.level} ${c.level} · ${t.path} ${t[c.path]} · ${t.date} ${new Date(c.issued_at).toLocaleDateString(lang)}`;
+      el('note').textContent=t.note;
+    }
+  }
+  el('form').addEventListener('submit',event=>{event.preventDefault(); show()}); if(code.value) show();
+</script></body></html>

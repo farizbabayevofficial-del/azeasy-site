@@ -1,0 +1,1 @@
+window.AZEASIER_VERIFY_CONFIG = {"url": "https://pftjnhynqyisjngnzpew.supabase.co", "publishableKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBmdGpuaHlucXlpc2puZ256cGV3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTAzNTY2OTYsImV4cCI6MjEwNTkzMjY5Nn0.BCR6Rx_wjaXmFmc-zhr69xM4GCgL-uXhdYcdTLusxq4"};
