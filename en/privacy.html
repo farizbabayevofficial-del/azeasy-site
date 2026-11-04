@@ -34,7 +34,7 @@
 <header class="legal-top"><a class="legal-home" href="../en/">AzEasier</a><details class="legal-language"><summary aria-label="Language">EN ⌄</summary><nav aria-label="Language"><a href="/privacy.html" hreflang="ru" lang="ru">RU</a><a href="/fr/privacy.html" hreflang="fr" lang="fr">FR</a></nav></details></header>
 <main>
 <h1>AzEasier Privacy Policy</h1>
-<p class="muted">Effective November 3, 2026.</p>
+<p class="muted">Effective November 4, 2026.</p>
 
 <p>AzEasier helps Russian speakers learn Azerbaijani, on iOS and Android; the same rules apply on both. This page explains what data we process, why, who receives it, and how to delete it. We do not sell data, show ads, or track you across other apps or websites.</p>
 
@@ -59,6 +59,7 @@
   <tr><td>Diagnostics — only if you agreed: app crashes and freezes (only the signal or exception type, such as “NullPointerException”, and a count of freezes; on iOS through MetricKit, on Android through the system's process-exit report; no stack traces and no memory contents in our own events; the crash report that Sentry receives does contain the stack trace of the app's own code, but never lesson content, your answers or messages, your name or your email); app start-up time, screen load time and sync duration; error codes, the kind of network error (offline, timeout, server response with its code) and where it happened; app version, iOS or Android version, device model, language and region setting</td><td>Find and fix crashes, slow screens and network errors across devices</td></tr>
   <tr><td>Your answer about statistics: “yes” or “no”, the date of the answer and the version of the text you saw</td><td>Show that statistics are collected only with your consent, and show your choice on any device</td></tr>
   <tr><td>Email preferences: consent or withdrawal, the date of each change, the date you last opened the app</td><td>Send only what you agreed to, and not remind people who already practise regularly</td></tr>
+  <tr><td>Course record: chosen name, level, path, issue date and identifier</td><td>Issue the requested record and, if you enable sharing, allow public verification</td></tr>
 </table>
 <p><strong>Usage statistics and diagnostics</strong> are collected <strong>only with your consent</strong> (our basis is your consent). After you first sign in, the app asks whether you agree; “yes” and “no” are equal choices. Until you answer, or if you answer “no”, nothing is recorded or sent, and the server rejects such data. The data is stored in our own Supabase project in the EU (France), is linked to your account and is not passed to anyone, including third-party analytics services. The only exception is crash and error reports: they go to Sentry (section 3) and are not linked to your account. You can change your answer at any time: <strong>Profile → “Статистика использования”</strong> (Usage statistics). If you withdraw consent, anything not yet sent is deleted from your device and the events already stored on the server are erased at once. Raw events are in any case deleted after 180 days and together with your account. The date you last opened the app is recorded only if you agreed to statistics or to email reminders; it is used to avoid sending reminders to people who already practise regularly.</p>
 <p><strong>AI tutor usage</strong> is kept for up to 13 months so the monthly budget can be checked and compared over time. When you delete your account, the link to you is removed immediately: the row stays only as an anonymized spend record.</p>
@@ -83,6 +84,8 @@
 </ul>
 <p>We do not sell or rent your data. We do not share usage statistics with anyone; diagnostics go only to Sentry, as described above.</p>
 
+<p><strong>Course records and LinkedIn.</strong> Public verification is optional. If you enable it, anyone with the link can see the chosen name, level, path and date. You can turn access off in the app. If you add the record to LinkedIn, you share this information with LinkedIn under its own terms; copies already saved by third parties may remain.</p>
+
 <h2>4. Retention and deletion</h2>
 <p>Data is kept while your account exists, except for the following:</p>
 <ul>
@@ -94,6 +97,8 @@
   <li>subscription state — while the account exists; deleted with the account.</li>
 </ul>
 <p>You can delete your account in the app: <strong>Profile → Delete account</strong>. Your account, profile, progress, AzEasier subscription state, lessons left half-way, answers, tutor messages, feedback, usage statistics and diagnostics, your answer about statistics, email preferences and linked sign-in providers are erased immediately and permanently; AI tutor usage records lose their link to the account. Deleting the account does not cancel the subscription: cancel it separately in Apple ID settings (iOS) or in Google Play (Android). Emails already delivered through Brevo may stay in Brevo's delivery log for some time under Brevo's own rules. Hosting backups, if any, are removed on their normal cycle. You can also email <a href="mailto:contact@finalingua.com">contact@finalingua.com</a> and we will delete it manually. If you signed in with Apple, Google, Facebook or Yandex ID, deleting your AzEasier account does not revoke access on that provider's side — do that separately in the provider account settings.</p>
+
+<p>Course records are kept while the account exists and deleted with it; their verification links then stop working.</p>
 
 <h2>5. Security</h2>
 <p>Data is sent over HTTPS. Database access is restricted with row-level security so each user only sees their own data. XP and streak are computed on the server. AI service and email service keys are kept only on the server. Feedback and usage statistics can be read only by the developer: the private screen opens only for accounts on a separate list in the database, and is neither visible nor usable for anyone else.</p>
