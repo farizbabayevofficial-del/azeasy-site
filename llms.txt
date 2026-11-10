@@ -6,6 +6,12 @@
 - [Russian home page](https://azeasier.finalingua.com/): the app for Russian speakers who want to learn Azerbaijani
 - [English home page](https://azeasier.finalingua.com/en/): learn Azerbaijani for beginners
 - [French home page](https://azeasier.finalingua.com/fr/): apprendre l'azéri
+- [Learn Azerbaijani for beginners](https://azeasier.finalingua.com/en/learn-azerbaijani-for-beginners.html): where to start
+- [Azerbaijani alphabet](https://azeasier.finalingua.com/en/azerbaijani-alphabet.html): 32 letters with pronunciation
+- [Basic Azerbaijani phrases](https://azeasier.finalingua.com/en/basic-azerbaijani-phrases.html): phrases and numbers 1 to 1000
+- [Latin to Cyrillic converter](https://azeasier.finalingua.com/en/azerbaijani-latin-cyrillic-converter.html): local tool
+- [Press kit](https://azeasier.finalingua.com/en/press.html): verified facts, logo, icon
+- [Азербайджанский с нуля](https://azeasier.finalingua.com/azerbaijanski-s-nulya.html): с чего начать
 - [Our story](https://azeasier.finalingua.com/en/about.html): why the app exists
 - [Privacy policy](https://azeasier.finalingua.com/en/privacy.html): what data is processed and how to delete it
 - [Terms of use](https://azeasier.finalingua.com/en/terms.html)
