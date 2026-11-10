@@ -1,0 +1,18 @@
+# AzEasier
+
+> AzEasier is a mobile app that teaches Azerbaijani (Azeri) with short lessons, audio for every phrase and an AI tutor. Explanations are in Russian, English or French. Level A1 is free and works without an account. Publisher: Finalingua (France). Contact: contact@finalingua.com.
+
+## Pages
+- [Russian home page](https://azeasier.finalingua.com/): the app for Russian speakers who want to learn Azerbaijani
+- [English home page](https://azeasier.finalingua.com/en/): learn Azerbaijani for beginners
+- [French home page](https://azeasier.finalingua.com/fr/): apprendre l'azéri
+- [Our story](https://azeasier.finalingua.com/en/about.html): why the app exists
+- [Privacy policy](https://azeasier.finalingua.com/en/privacy.html): what data is processed and how to delete it
+- [Terms of use](https://azeasier.finalingua.com/en/terms.html)
+- [Account and data deletion](https://azeasier.finalingua.com/en/data-deletion.html)
+
+## Facts a reader may rely on
+- Size: a quick path of 72 lessons (about 9 hours) or the full course of over 1,300 lessons from A1 to C1; progress is shared and the learner can switch at any time.
+- Download: App Store https://apps.apple.com/app/id6817151732 (iOS). Google Play is announced as coming soon on the site.
+- The audio is synthetic speech, not a human recording. The AI tutor can make mistakes; the lessons are the main source.
+- The English and French explanations have not yet been reviewed by native speakers.
