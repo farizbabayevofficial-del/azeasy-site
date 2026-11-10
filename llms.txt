@@ -1,6 +1,6 @@
 # AzEasier
 
-> AzEasier is a mobile app that teaches Azerbaijani (Azeri) with short lessons, audio for every phrase and an AI tutor. Explanations are in Russian, English or French. Level A1 is free and works without an account. Publisher: Finalingua (France). Contact: azeasier@finalingua.com. Social: Instagram https://www.instagram.com/azeasier/, TikTok https://www.tiktok.com/@azeasier, YouTube https://www.youtube.com/@azeasier.
+> AzEasier is a mobile app that teaches Azerbaijani (Azeri) with short lessons, audio for every phrase and an AI tutor. Explanations are in Russian, English or French. Level A1 is free and works without an account. Publisher: Finalingua (France). Contact: azeasier@finalingua.com. Social: Instagram https://www.instagram.com/azeasier/ (Russian: https://www.instagram.com/azeasier_ru/), TikTok https://www.tiktok.com/@azeasier (Russian: https://www.tiktok.com/@azeasier_ru), YouTube https://www.youtube.com/@azeasier.
 
 ## Pages
 - [Russian home page](https://azeasier.finalingua.com/): the app for Russian speakers who want to learn Azerbaijani
