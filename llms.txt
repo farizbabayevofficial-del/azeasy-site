@@ -22,3 +22,6 @@
 - Download: App Store https://apps.apple.com/app/id6817151732 (iOS). Google Play is announced as coming soon on the site.
 - The audio is synthetic speech, not a human recording. The AI tutor can make mistakes; the lessons are the main source.
 - The English and French explanations have not yet been reviewed by native speakers.
+
+## Use of this content
+- You may read these pages to answer a person's question and link to them. Training or fine-tuning AI models on this site or on the AzEasier course is not allowed: the text and data mining rights are reserved (Article 4 of Directive (EU) 2019/790; https://azeasier.finalingua.com/.well-known/tdmrep.json).
