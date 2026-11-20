@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="tdm-reservation" content="1"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow"><meta name="referrer" content="no-referrer">
+  <title>AzEasier</title>
+  <link rel="preconnect" href="https://challenges.cloudflare.com">
+  <style>
+    :root { color-scheme:light dark; font-family:-apple-system,'Segoe UI',Roboto,system-ui,sans-serif; color:#123b3a; background:#f3f8f5; }
+    @media (prefers-color-scheme: dark) { :root { color:#e3efeb; background:#0f1d1b; } p { color:#a9c2bc; } }
+    body { margin:0; } main { max-width:420px; margin:0 auto; padding:40px 20px; text-align:center; }
+    h1 { font-size:22px; margin:0 0 12px; } p { line-height:1.5; color:#526d68; margin:0 0 24px; }
+    #widget { display:flex; justify-content:center; min-height:65px; }
+    button { margin-top:20px; padding:12px 22px; color:white; background:#00665b; border:0; border-radius:12px; font:inherit; font-weight:600; }
+    [hidden] { display:none; }
+  </style>
+</head>
+<body><main><h1 id="title"></h1><p id="intro"></p><div id="widget"></div><p id="failed" hidden></p><button id="again" type="button" hidden></button></main>
+<script>
+// J39-12 part 2 (docs/security/tutor-abuse.md, section 6). The apps open this page in a web view before an email sign-up or a
+// password sign-in; the token goes back to the app by a navigation to azeasy-captcha://, which the app stops and reads, and the
+// app sends it to Supabase Auth with that one call. No cookie, no analytics; Turnstile itself is Cloudflare's (privacy policy).
+const SITEKEY = "0x4AAAAAAGKkeA4NCSJHLx8b";
+const TEXT = {
+  ru: ["Проверка", "Отметьте, что вы человек, и вход продолжится.", "Проверка не прошла. Проверьте соединение и попробуйте ещё раз.", "Ещё раз"],
+  en: ["Quick check", "Confirm you are a person and sign-in goes on.", "The check failed. Check your connection and try again.", "Try again"],
+  fr: ["Vérification", "Confirmez que vous êtes une personne et la connexion continue.", "La vérification a échoué. Vérifiez la connexion et réessayez.", "Réessayer"],
+  tr: ["Doğrulama", "İnsan olduğunuzu onaylayın, giriş devam etsin.", "Doğrulama başarısız. Bağlantınızı kontrol edip tekrar deneyin.", "Tekrar dene"],
+  az: ["Yoxlama", "İnsan olduğunuzu təsdiqləyin, giriş davam etsin.", "Yoxlama alınmadı. Bağlantını yoxlayıb yenidən cəhd edin.", "Yenidən"],
+};
+const lang = new URLSearchParams(location.search).get("lang");
+const text = TEXT[lang] || TEXT.ru;
+document.documentElement.lang = TEXT[lang] ? lang : "ru";
+const [title, intro, failed, again] = text;
+document.getElementById("title").textContent = title;
+document.getElementById("intro").textContent = intro;
+document.getElementById("failed").textContent = failed;
+document.getElementById("again").textContent = again;
+let widget;
+function fail() { document.getElementById("failed").hidden = false; document.getElementById("again").hidden = false; }
+document.getElementById("again").onclick = () => {
+  document.getElementById("failed").hidden = true; document.getElementById("again").hidden = true;
+  if (window.turnstile && widget !== undefined) turnstile.reset(widget); else location.reload();
+};
+window.onTurnstileLoad = () => {
+  widget = turnstile.render("#widget", {
+    sitekey: SITEKEY, language: document.documentElement.lang, theme: "auto", action: "signin",
+    callback: (token) => { location.href = "azeasy-captcha://token?value=" + encodeURIComponent(token); },
+    "expired-callback": () => turnstile.reset(widget),
+    "error-callback": () => { fail(); return true; },
+  });
+};
+</script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad" async defer onerror="fail()"></script>
+</body>
+</html>
