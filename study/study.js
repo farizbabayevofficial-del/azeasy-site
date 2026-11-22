@@ -6,9 +6,9 @@
 
   var T = {
     en: {
-      choose: 'Choose your language', code: 'Your code (on your paper)', pin: 'PIN (6 digits)', start: 'Start',
+      heading: 'Azerbaijani test', choose: 'Choose your language', code: 'Your code (on your paper)', pin: 'PIN (8 digits)', start: 'Start',
       unknown: 'This code does not exist. Check it and try again.', wrong: 'Wrong PIN. Check it and try again.',
-      locked: 'Too many tries. Wait 15 minutes, then try again.', closed: 'This study is closed.',
+      locked: 'Too many tries. Wait up to an hour, then try again.', closed: 'This study is closed.',
       done: 'You have taken both tests. Thank you!', wait: 'The second test opens on {date}. Come back then with the same code.',
       network: 'No connection. Check the internet and try again.', failed: 'Something went wrong. Try again, or write to {contact}.',
       before: 'Before you start',
@@ -29,16 +29,17 @@
         'If you do not know, tap “I don’t know”. That is better than a guess.'
       ], begin: 'Begin',
       listening: 'Listen and choose the word you hear.', vocabulary: 'What does this word mean?',
-      reading: 'What does this sentence mean?', play: '▶ Listen', playsLeft: 'You can listen {n} more time(s).',
+      reading: 'What does this sentence mean?', play: 'Listen',
+      tag: { listening: 'Listening', vocabulary: 'Vocabulary', reading: 'Reading' }, playsLeft: 'You can listen {n} more time(s).',
       dunno: 'I don’t know', of: 'Question {i} of {n}', finish: 'Send my answers', sending: 'Sending…',
       thanks1: 'Thank you! Test 1 is done.',
       after1: 'Now install AzEasier (App Store or Google Play), create your account with the same e-mail and practise about 15 minutes a day. Your teacher will tell you when to take test 2: same link, same code, same PIN. Keep your paper.',
       thanks2: 'Thank you! Test 2 is done. Your teacher will receive the group results.'
     },
     ru: {
-      choose: 'Выберите язык', code: 'Ваш код (на листке)', pin: 'PIN (6 цифр)', start: 'Начать',
+      heading: 'Тест по азербайджанскому', choose: 'Выберите язык', code: 'Ваш код (на листке)', pin: 'PIN (8 цифр)', start: 'Начать',
       unknown: 'Такого кода нет. Проверьте его и попробуйте снова.', wrong: 'Неверный PIN. Проверьте и попробуйте снова.',
-      locked: 'Слишком много попыток. Подождите 15 минут.', closed: 'Исследование закрыто.',
+      locked: 'Слишком много попыток. Подождите до часа и попробуйте снова.', closed: 'Исследование закрыто.',
       done: 'Вы прошли оба теста. Спасибо!', wait: 'Второй тест откроется {date}. Возвращайтесь с тем же кодом.',
       network: 'Нет соединения. Проверьте интернет и попробуйте снова.', failed: 'Что-то пошло не так. Попробуйте снова или напишите на {contact}.',
       before: 'Перед началом',
@@ -59,16 +60,17 @@
         'Если не знаете ответа, нажмите «Не знаю». Это лучше, чем угадывать.'
       ], begin: 'Начать',
       listening: 'Послушайте и выберите слово, которое слышите.', vocabulary: 'Что значит это слово?',
-      reading: 'Что значит это предложение?', play: '▶ Слушать', playsLeft: 'Можно прослушать ещё {n} раз(а).',
+      reading: 'Что значит это предложение?', play: 'Слушать',
+      tag: { listening: 'Аудирование', vocabulary: 'Лексика', reading: 'Чтение' }, playsLeft: 'Можно прослушать ещё {n} раз(а).',
       dunno: 'Не знаю', of: 'Вопрос {i} из {n}', finish: 'Отправить ответы', sending: 'Отправка…',
       thanks1: 'Спасибо! Тест 1 пройден.',
       after1: 'Теперь установите AzEasier (App Store или Google Play), создайте аккаунт с тем же e-mail и занимайтесь около 15 минут в день. Преподаватель скажет, когда проходить тест 2: та же ссылка, тот же код, тот же PIN. Сохраните листок.',
       thanks2: 'Спасибо! Тест 2 пройден. Преподаватель получит результаты группы.'
     },
     fr: {
-      choose: 'Choisissez votre langue', code: 'Votre code (sur votre papier)', pin: 'PIN (6 chiffres)', start: 'Commencer',
+      heading: 'Test d’azerbaïdjanais', choose: 'Choisissez votre langue', code: 'Votre code (sur votre papier)', pin: 'PIN (8 chiffres)', start: 'Commencer',
       unknown: 'Ce code n’existe pas. Vérifiez-le et réessayez.', wrong: 'PIN incorrect. Vérifiez-le et réessayez.',
-      locked: 'Trop d’essais. Attendez 15 minutes.', closed: 'Cette étude est close.',
+      locked: 'Trop d’essais. Attendez jusqu’à une heure, puis réessayez.', closed: 'Cette étude est close.',
       done: 'Vous avez passé les deux tests. Merci !', wait: 'Le second test ouvre le {date}. Revenez alors avec le même code.',
       network: 'Pas de connexion. Vérifiez internet et réessayez.', failed: 'Un problème est survenu. Réessayez ou écrivez à {contact}.',
       before: 'Avant de commencer',
@@ -89,16 +91,17 @@
         'Si vous ne savez pas, touchez « Je ne sais pas ». C’est mieux qu’au hasard.'
       ], begin: 'Commencer',
       listening: 'Écoutez et choisissez le mot entendu.', vocabulary: 'Que veut dire ce mot ?',
-      reading: 'Que veut dire cette phrase ?', play: '▶ Écouter', playsLeft: 'Encore {n} écoute(s) possible(s).',
+      reading: 'Que veut dire cette phrase ?', play: 'Écouter',
+      tag: { listening: 'Écoute', vocabulary: 'Vocabulaire', reading: 'Lecture' }, playsLeft: 'Encore {n} écoute(s) possible(s).',
       dunno: 'Je ne sais pas', of: 'Question {i} sur {n}', finish: 'Envoyer mes réponses', sending: 'Envoi…',
       thanks1: 'Merci ! Le test 1 est fait.',
       after1: 'Installez maintenant AzEasier (App Store ou Google Play), créez votre compte avec le même e-mail et pratiquez environ 15 minutes par jour. Votre enseignant vous dira quand passer le test 2 : même lien, même code, même PIN. Gardez votre papier.',
       thanks2: 'Merci ! Le test 2 est fait. Votre enseignant recevra les résultats du groupe.'
     },
     tr: {
-      choose: 'Dilinizi seçin', code: 'Kodunuz (kâğıdınızda)', pin: 'PIN (6 rakam)', start: 'Başla',
+      heading: 'Azerbaycan Türkçesi testi', choose: 'Dilinizi seçin', code: 'Kodunuz (kâğıdınızda)', pin: 'PIN (8 rakam)', start: 'Başla',
       unknown: 'Bu kod yok. Kontrol edip tekrar deneyin.', wrong: 'PIN yanlış. Kontrol edip tekrar deneyin.',
-      locked: 'Çok fazla deneme. 15 dakika bekleyin.', closed: 'Bu araştırma kapandı.',
+      locked: 'Çok fazla deneme. En fazla bir saat bekleyip tekrar deneyin.', closed: 'Bu araştırma kapandı.',
       done: 'İki testi de tamamladınız. Teşekkürler!', wait: 'İkinci test {date} tarihinde açılır. O zaman aynı kodla gelin.',
       network: 'Bağlantı yok. İnterneti kontrol edip tekrar deneyin.', failed: 'Bir sorun oldu. Tekrar deneyin veya {contact} adresine yazın.',
       before: 'Başlamadan önce',
@@ -119,7 +122,8 @@
         'Bilmiyorsanız “Bilmiyorum”a dokunun. Tahmin etmekten iyidir.'
       ], begin: 'Başla',
       listening: 'Dinleyin ve duyduğunuz kelimeyi seçin.', vocabulary: 'Bu kelime ne demek?',
-      reading: 'Bu cümle ne demek?', play: '▶ Dinle', playsLeft: '{n} kez daha dinleyebilirsiniz.',
+      reading: 'Bu cümle ne demek?', play: 'Dinle',
+      tag: { listening: 'Dinleme', vocabulary: 'Kelime', reading: 'Okuma' }, playsLeft: '{n} kez daha dinleyebilirsiniz.',
       dunno: 'Bilmiyorum', of: 'Soru {i} / {n}', finish: 'Cevaplarımı gönder', sending: 'Gönderiliyor…',
       thanks1: 'Teşekkürler! Test 1 tamam.',
       after1: 'Şimdi AzEasier’i (App Store veya Google Play) yükleyin, aynı e-postayla hesabınızı oluşturun ve günde yaklaşık 15 dakika çalışın. Test 2’nin ne zaman olduğunu öğretmeniniz söyleyecek: aynı bağlantı, aynı kod, aynı PIN. Kâğıdınızı saklayın.',
@@ -144,7 +148,8 @@
     if (text === undefined) return '';
     Object.keys(fill || {}).forEach(function (k) { text = text.split('{' + k + '}').join(fill[k]); });
     function contact(line) { return line.split('{contact}').join(CONTACT); }
-    return typeof text === 'string' ? contact(text) : text.map(contact);
+    if (typeof text === 'string') return contact(text);
+    return Array.isArray(text) ? text.map(contact) : text;
   }
   function el(tag, attrs, children) {
     var node = document.createElement(tag);
@@ -194,16 +199,42 @@
 
   function langPicker() {
     var names = { en: 'English', ru: 'Русский', fr: 'Français', tr: 'Türkçe' };
-    return el('div', { class: 'langs', 'aria-label': t('choose') }, Object.keys(names).map(function (code) {
-      return el('button', { type: 'button', 'aria-pressed': String(code === state.lang), lang: code, text: names[code],
+    return el('div', { class: 'chips', role: 'group', 'aria-label': t('choose') }, Object.keys(names).map(function (code) {
+      return el('button', { type: 'button', class: 'chip', 'aria-pressed': String(code === state.lang), lang: code, text: names[code],
         on: { click: function () { state.lang = code; login(); } } });
     }));
   }
+  function field(id, label, input) {
+    return el('div', { class: 'field' }, [el('label', { for: id, text: label }), input]);
+  }
+  function banner(message) {
+    return el('p', { class: 'banner', role: 'alert', text: message || '' });
+  }
+  function actions(button) {
+    return el('div', { class: 'actions' }, [button]);
+  }
+  function speaker() {
+    var ns = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(ns, 'svg');
+    svg.setAttribute('viewBox', '0 0 24 24');
+    svg.setAttribute('aria-hidden', 'true');
+    [['path', 'M4 9h4l5-4v14l-5-4H4z', 'currentColor', 'none'],
+     ['path', 'M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12', 'none', 'currentColor']].forEach(function (d) {
+      var shape = document.createElementNS(ns, d[0]);
+      shape.setAttribute('d', d[1]);
+      shape.setAttribute('fill', d[2]);
+      shape.setAttribute('stroke', d[3]);
+      shape.setAttribute('stroke-width', '2');
+      shape.setAttribute('stroke-linecap', 'round');
+      svg.appendChild(shape);
+    });
+    return svg;
+  }
 
   function login(message) {
-    var code = el('input', { type: 'text', id: 'code', autocomplete: 'off', autocapitalize: 'characters', spellcheck: 'false', value: state.code });
-    var pin = el('input', { type: 'text', id: 'pin', inputmode: 'numeric', autocomplete: 'off', maxlength: '6', value: state.pin });
-    var error = el('p', { class: 'error', role: 'alert', text: message || '' });
+    var code = el('input', { type: 'text', id: 'code', class: 'code', autocomplete: 'off', autocapitalize: 'characters',
+      spellcheck: 'false', maxlength: '12', value: state.code });
+    var pin = el('input', { type: 'text', id: 'pin', inputmode: 'numeric', autocomplete: 'off', maxlength: '12', value: state.pin });
     var go = el('button', { type: 'submit', class: 'primary', text: t('start') });
     var form = el('form', { on: { submit: function (e) {
       e.preventDefault();
@@ -219,11 +250,10 @@
         if (state.test === 1 && !state.email) consent(); else intro();
       }).catch(function () { login(t('network')); });
     } } }, [
-      el('label', { for: 'code', text: t('code') }), code,
-      el('label', { for: 'pin', text: t('pin') }), pin,
-      error, go
+      el('div', { class: 'card' }, [field('code', t('code'), code), field('pin', t('pin'), pin)]),
+      banner(message), actions(go)
     ]);
-    show([el('h1', { text: 'AzEasier' }), langPicker(), form]);
+    show([el('h1', { text: t('heading') }), el('p', { class: 'eyebrow', text: t('choose') }), langPicker(), form]);
   }
 
   function consent() {
@@ -244,14 +274,19 @@
       state.email = email.value.trim();
       save();
       intro();
-    } } }, [el('label', { for: 'email', text: t('email') }), email].concat(boxes.map(function (b) { return b.row; }), [go]));
-    show([el('h1', { text: t('before') })].concat(t('consent').map(function (line) { return el('p', { text: line }); }), [form]));
+    } } }, [
+      el('div', { class: 'card' }, [field('email', t('email'), email)].concat(boxes.map(function (b) { return b.row; }))),
+      actions(go)
+    ]);
+    show([el('h1', { text: t('before') }),
+      el('div', { class: 'card' }, t('consent').map(function (line) { return el('p', { class: 'muted', text: line }); })),
+      form]);
   }
 
   function intro() {
-    show([el('h1', { text: t('intro', { n: state.test }) }),
-      el('ul', {}, t('introText').map(function (line) { return el('li', { text: line }); })),
-      el('button', { type: 'button', class: 'primary', text: t('begin'), on: { click: question } })]);
+    show([el('p', { class: 'eyebrow', text: t('heading') }), el('h1', { text: t('intro', { n: state.test }) }),
+      el('div', { class: 'card' }, [el('ul', {}, t('introText').map(function (line) { return el('li', { text: line }); }))]),
+      actions(el('button', { type: 'button', class: 'primary', text: t('begin'), on: { click: question } }))]);
   }
 
   function question() {
@@ -281,7 +316,7 @@
       var left = PLAYS - (state.plays[item.id] || 0);
       var note = el('p', { class: 'muted', text: t('playsLeft', { n: left }) });
       var audio = new Audio(item.audio);
-      var play = el('button', { type: 'button', class: 'play', text: t('play'), on: { click: function () {
+      var play = el('button', { type: 'button', class: 'play', 'aria-label': t('play'), on: { click: function () {
         if ((state.plays[item.id] || 0) >= PLAYS) return;
         state.plays[item.id] = (state.plays[item.id] || 0) + 1;
         save();
@@ -290,21 +325,24 @@
         var rest = PLAYS - state.plays[item.id];
         note.textContent = t('playsLeft', { n: rest });
         if (rest <= 0) play.disabled = true;
-      } } });
+      } } }, [speaker()]);
       if (left <= 0) play.disabled = true;
-      stem = [play, note];
+      stem = [el('div', { class: 'listen' }, [play, el('div', {}, [el('strong', { text: t('play') }), note])])];
     } else {
       stem = [el('p', { class: 'prompt', lang: 'az', text: item.prompt })];
     }
-    show([el('div', { class: 'bar', role: 'progressbar', 'aria-valuemin': '0', 'aria-valuemax': String(total), 'aria-valuenow': String(state.index) },
-        [el('div', { style: 'width:' + Math.round(100 * state.index / total) + '%' })]),
+    var fill = el('div');
+    fill.style.width = Math.round(100 * state.index / total) + '%';
+    show([el('div', { class: 'progress', role: 'progressbar', 'aria-label': t('of', { i: state.index + 1, n: total }),
+        'aria-valuemin': '0', 'aria-valuemax': String(total), 'aria-valuenow': String(state.index) }, [fill]),
       el('p', { class: 'muted', text: t('of', { i: state.index + 1, n: total }) }),
-      el('h1', { text: t(item.section) })].concat(stem, buttons, [next]));
+      el('p', { class: 'eyebrow', text: t('tag')[item.section] }),
+      el('h1', { text: t(item.section) })].concat(stem, [el('div', { class: 'choices' }, buttons), actions(next)]));
   }
 
   function finish(message) {
     var go = el('button', { type: 'button', class: 'primary', text: t('finish'), on: { click: send } });
-    show([el('h1', { text: t('finish') }), el('p', { class: 'error', role: 'alert', text: message || '' }), go]);
+    show([el('h1', { text: t('finish') }), banner(message), actions(go)]);
     function send() {
       go.disabled = true;
       go.textContent = t('sending');
@@ -315,9 +353,11 @@
       }).then(function (r) {
         if (!r.ok) return finish(t(r.reason, { date: r.from || '' }) || t('failed'));
         forget();
+        state.pin = '';
+        var mark = el('div', { class: 'done', 'aria-hidden': 'true', text: '✓' });
         show(state.test === 1
-          ? [el('h1', { text: t('thanks1') }), el('p', { text: t('after1') })]
-          : [el('h1', { text: t('thanks2') })]);
+          ? [mark, el('h1', { text: t('thanks1') }), el('div', { class: 'card' }, [el('p', { text: t('after1') })])]
+          : [mark, el('h1', { text: t('thanks2') })]);
       }).catch(function () { finish(t('network')); });
     }
     if (!message) send();
@@ -326,5 +366,5 @@
   fetch('forms.json').then(function (r) { return r.json(); }).then(function (data) {
     forms = data;
     login();
-  }).catch(function () { show([el('p', { class: 'error', text: t('network') })]); });
+  }).catch(function () { show([banner(t('network'))]); });
 })();
