@@ -37,9 +37,10 @@ document.getElementById("intro").textContent = intro;
 document.getElementById("failed").textContent = failed;
 document.getElementById("again").textContent = again;
 let widget;
+let silentRetries = 0;
 function fail() { document.getElementById("failed").hidden = false; document.getElementById("again").hidden = false; }
 document.getElementById("again").onclick = () => {
-  document.getElementById("failed").hidden = true; document.getElementById("again").hidden = true;
+  document.getElementById("failed").hidden = true; document.getElementById("again").hidden = true; silentRetries = 0;
   if (window.turnstile && widget !== undefined) turnstile.reset(widget); else location.reload();
 };
 window.onTurnstileLoad = () => {
@@ -47,7 +48,8 @@ window.onTurnstileLoad = () => {
     sitekey: SITEKEY, language: document.documentElement.lang, theme: "auto", action: "signin",
     callback: (token) => { location.href = "azeasy-captcha://token?value=" + encodeURIComponent(token); },
     "expired-callback": () => turnstile.reset(widget),
-    "error-callback": () => { fail(); return true; },
+    // A fresh web view often fails Turnstile's first attempt; try once more on our own before showing the failure.
+    "error-callback": () => { if (silentRetries++ < 1) turnstile.reset(widget); else fail(); return true; },
   });
 };
 </script>
